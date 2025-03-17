@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blommers help</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Set a default font */
+    background-image: url('meditatingai.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
+    min-height: 100vh;
+    font-family: "Dosis", sans-serif;
+    overflow: hidden;
+      }
+      .emi {
+        text-align: center; 
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      margin-top: 100px;
+      }
+  
+      iframe {
+        border: none; /* Remove iframe border */
+      }
+  
+      .navbar{
+  background:#08090b46;
+  height: 80px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  
+}
+
+.con{
+display: flex;
+justify-content: space-between;
+height: 80px;
+z-index:1;
+width:100%;
+max-width:1300px;
+margin: 0 auto ;
+padding: 0 50px;
+}
+
+#navbar__logo{
+  background-color: #030303;
+  background-image: linear-gradient(to top,#443bed 0%,#6acef3 100%);
+ background-size: 100%;
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-text-fill-color:transparent;
+ display:flex;
+ align-items: center;
+ cursor: pointer; 
+ text-decoration: none;
+ font-size: 45px;
+ font-weight: 600;
+}
+
+.logo{
+  height: 50px; /* Adjust logo size */
+  width: 50px;
+  margin-right: 20px; /* Space between text and logo */
+
+}
+
+
+
+
+.navbar__menu{
+  display:flex;
+ align-items: center;
+ list-style: none;
+ text-align: center;
+ 
+}
+
+
+.navbar__item{
+  height: 80px;
+
+}
+
+
+.navbar_link {
+  color:#f0f1f2;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+
+
+.navbar_link:hover{
+color:rgb(43, 34, 127);
+transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:960px){
+.con{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0;
+
+}
+
+
+.navbar__menu{
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+ top: -1000px;
+  opacity: 1;
+  transition: all 0.5s ease;
+  height: 50vh;
+  z-index: -1;
+  background: #131313;
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+    padding: 0; /* Remove any padding causing overflow */
+  
+}
+
+.navbar__menu.active{
+  background:#08090b46;
+  top:100%;
+  opacity:1;
+  transition: all 0.5s ease ;
+  z-index: 99;
+  height: 50vh;
+  font-size: 1.6rem;
+
+}
+
+#navbar__logo{
+  padding-left: 25px;
+
+}
+
+
+.navbar__toggle .bar{
+  width:25px;
+  height: 3px;
+  margin: 5px 18px;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+}
+
+.navbar__item{
+  width: 100%;
+
+}
+
+.navbar_link{
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  display: table;
+}
+
+#moblie-menu{
+  position: absolute;
+  top:20%;
+  right:5%;
+  transform: translate(5%,20%);
+}
+
+.navbar__toggle .bar {
+  display:block;
+  cursor: pointer;
+}
+#mobile-menu.is-active .bar:nth-last-child(2){   /*for changing the bar to an X when we hit it */
+opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-last-child(1){
+  transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-last-child(3){
+    transform: translateY(24px) rotate(-45deg);
+    }
+
+}
+
+
+
+
+  .info{ 
+    width: 100%; /* Use percentage for responsiveness */
+    max-width: 60rem; /* Limit maximum width */
+    height:auto;
+    padding-left: 40px;
+    background-color: rgba(216, 216, 216, 0.862); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for better visibility */
+  box-shadow: 20px 12px 12px rgba(74, 65, 198, 0.764),(-10 -10 12 white); /* Subtle shadow for depth */
+    position: relative;
+    top:5rem;
+    left:1rem;
+  }
+
+.info_contain{
+  position: relative;
+  height:100%;
+  width:100%;
+  align-items:flex;
+  position: relative;
+  display: flex;
+  
+}
+
+.info_content{
+  height:27rem;
+  width:30rem;
+  position:relative;
+  top:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+}
+
+.info_content p{
+  color:rgb(10, 10, 10);
+  font-size: 1.5rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: -10px;
+}
+
+
+.info_content h1{
+  font-size: 4rem;
+  background-color: #7588c9;
+    background-image: linear-gradient(to top,#0a3c88c2 0%,#8c7fa7 100%);
+   background-size: 100%;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color:transparent;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.conlogo{
+width:27rem;
+height:50%;
+background-color: #b6ddf3de;
+position: absolute;
+right:0%;
+top:100px;
+
+}
+
+.slogo{
+position:absolute;
+display: flex;
+flex-direction: column;
+width:15rem;
+height: 50%;
+padding:10px;
+left:30px;
+top:50px;
+gap:20px;
+
+}
+
+.slogo i {
+  color: white; /* Makes the icons white */
+  font-size:1rem;
+}
+
+
+.logonames {
+  position: relative;
+  display: flex;
+flex-direction: column;
+width:15rem;
+height: 50%;
+padding:10px;
+left:30px;
+top:50px;
+}
+
+
+.logonames ul {
+  list-style: none; /* Removes the dots (bullets) */
+  padding: 0; /* Removes default padding */
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  gap: 20px; /* Adds 20px space between each list item */
+  position: relative;
+  left:30px;
+  top:-15px;
+}
+
+
+
+
+
+@media (max-width: 960px) {
+  .info {
+    width: 80%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Add padding for better spacing */
+    top: 2rem; /* Reduce top margin */
+  }
+
+  .info_contain {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+
+  .info_content {
+    width: 100%; /* Take full width */
+    height: auto; /* Allow height to adjust */
+    top: 0; /* Remove top positioning */
+    text-align: center; /* Center-align text */
+  }
+
+
+  .conlogo {
+    position: relative; /* Reset positioning */
+    width: 100%; /* Take full width */
+    height: auto; /* Allow height to adjust */
+    top: 20px; /* Adjust top margin */
+    right: 0; /* Reset right positioning */
+    background-color: transparent; /* Remove background color */
+  }
+
+  .slogo {
+    position: relative; /* Reset positioning */
+    left: 0; /* Reset left positioning */
+    top: 0; /* Reset top positioning */
+    flex-direction: row; /* Align icons horizontally */
+    justify-content: center; /* Center icons horizontally */
+    gap: 30px; /* Increase gap between icons */
+  }
+
+  .logonames {
+    position: relative; /* Reset positioning */
+    left: 0; /* Reset left positioning */
+    top: 0; /* Reset top positioning */
+    align-items: center; /* Center-align list items */
+  }
+
+
+  .logonames ul {
+    flex-direction: row; /* Align list items horizontally */
+    gap: 30px; /* Increase gap between list items */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .info {
+    width: 90%; /* Adjust width for smaller screens */
+    height: 400px;
+    padding: 10px; /* Reduce padding */
+  }
+
+  .info_content h1 {
+    font-size: 2.5rem; /* Further reduce heading size */
+  }
+
+  .info_content p {
+    font-size: 1rem; /* Further reduce paragraph font size */
+  }
+
+  .slogo {
+    gap: 15px; /* Reduce gap between icons */
+  }
+
+  .logonames ul {
+    gap: 15px; /* Reduce gap between list items */
+  }
+}
+
+
+
+
+
+
+  
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =) -->
+<body>
+  <nav class="navbar">
+    <div class="con">
+         <a href="/" id="navbar__logo"><!--<img class="logo" src="/" alt="Logo">-->Bloomers Ai </a>
+         <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+         <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar_link">
+                    Home
+                </a>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar_link" >
+                        About  
+                    </a>
+            </li>
+            <li class="navbar__item">
+                <a href="help.html" class="navbar_link">
+                    Help 
+                </a>
+        </li>
+        <li class="navbar__item">
+            <a href="Bloomerschat.html" class="navbar_link">
+                bloomers chat 
+            </a>
+    </li>
+
+         </ul>
+    </div>
+</nav>
+
+
+<div class="info">
+ <div class="info_contain">
+  <div class="info_content">
+    <h1> contact us </h1>
+      <p>  At Bloomers Ai, we’re committed to helping you on your journey to emotional 
+        well-being. Whether you have a question about our AI chat platform, need technical support,
+         or just want to share feedback,
+         we’d love to hear from you.<br><br><br>
+         we’re here to listen, support, and guide you !</p>
+
+  </div>
+  <div class="conlogo">
+ <div class="slogo">
+    <a href="/" class="social_icon_link" target="_blank"> <!-- blank so we can open it in a other browser -->
+      <i class="far fa-envelope"></i>
+  </a>
+  
+    <a href="/" class="social_icon_link" target="_blank"> <!-- blank so we can open it in a other browser -->
+        <i class="fab fa-instagram"> </i>
+        
+    </a>
+   
+    <a href="/" class="social_icon_link" target="_blank"> <!-- blank so we can open it in a other browser -->
+        <i class="fab fa-twitter"></i>
+</a> 
+
+</div>
+<div class="logonames">
+  <ul>
+    <li> Email</li>
+    <li> Instgram</li>
+    <li> Twitter</li>
+  </ul>
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>

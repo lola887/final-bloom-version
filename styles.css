@@ -1,0 +1,636 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding :0;
+  font-family: "Dosis", sans-serif;
+  
+}
+
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif; /* Set a default font */
+ /* background-image: url('meditatingai.jpg'); /* Add your image path here */
+  min-height: 100vh; /* Ensures the body covers the full viewport height */
+}
+
+.navbar{
+  background:#08090b46;
+  height: 80px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  
+}
+
+.con{
+display: flex;
+justify-content: space-between;
+height: 80px;
+z-index:1;
+width:100%;
+max-width:1300px;
+margin: 0 auto ;
+padding: 0 50px;
+}
+
+#navbar__logo{
+  background-color: #030303;
+  background-image: linear-gradient(to top,#443bed 0%,#6acef3 100%);
+ background-size: 100%;
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-text-fill-color:transparent;
+ display:flex;
+ align-items: center;
+ cursor: pointer; 
+ text-decoration: none;
+ font-size: 45px;
+ font-weight: 600;
+}
+
+.logo{
+  height: 50px; /* Adjust logo size */
+  width: 50px;
+  margin-right: 20px; /* Space between text and logo */
+
+}
+
+
+
+
+.navbar__menu{
+  display:flex;
+ align-items: center;
+ list-style: none;
+ text-align: center;
+
+}
+
+
+.navbar__item{
+  height: 80px;
+
+}
+
+
+.navbar_link {
+  color:#f0f1f2;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+
+
+.navbar_link:hover{
+color:rgb(43, 34, 127);
+transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:960px){
+.con{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0;
+
+}
+
+
+.navbar__menu{
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+ top: -1000px;
+  opacity: 1;
+  transition: all 0.5s ease;
+  height: 50vh;
+  z-index: -1;
+  background: #131313;
+}
+
+.navbar__menu.active{
+  background:#08090b46;
+  top:100%;
+  opacity:1;
+  transition: all 0.5s ease ;
+  z-index: 99;
+  height: 50vh;
+  font-size: 1.6rem;
+
+}
+
+#navbar__logo{
+  padding-left: 25px;
+
+}
+
+
+.navbar__toggle .bar{
+  width:25px;
+  height: 3px;
+  margin: 5px 18px;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+}
+
+.navbar__item{
+  width: 100%;
+
+}
+
+.navbar_link{
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  display: table;
+}
+
+#moblie-menu{
+  position: absolute;
+  top:20%;
+  right:5%;
+  transform: translate(5%,20%);
+}
+
+.navbar__toggle .bar {
+  display:block;
+  cursor: pointer;
+}
+#mobile-menu.is-active .bar:nth-last-child(2){   /*for changing the bar to an X when we hit it */
+opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-last-child(1){
+  transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-last-child(3){
+    transform: translateY(24px) rotate(-45deg);
+    }
+
+}
+
+
+
+
+/*picture and intro styling section */
+
+.main{
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('meditatingai.jpg'); /* Add your image path */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  position: relative; /* For overlay positioning */
+}
+
+
+
+.main_contain {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2;
+}
+
+
+
+.main_contain{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  align-items:center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding:0 50px;
+}
+
+.main_content h1{
+font-size: 4rem;
+background-color: #280998;
+background-image: linear-gradient(to top, #6dcddeec 50%, #443bed 99%);
+background-size: 100%;
+-webkit-background-clip:text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color:transparent;
+}
+
+.intro-text{
+  font-size:30px;
+  display: block; /* Ensure it goes to the next line */
+  margin-top: 10px; /* Adjust spacing above the intro text */
+  line-height: 1.2; /* Reduce spacing for the intro text */
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+
+.main_btn{
+  font-size:20px;
+  background-image: linear-gradient(to top, #eac4ceec 0%, #64cba5 100%);
+  padding: 20px 30px;
+  border:none;
+  border-radius: 10px;
+  color:#f41362;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+  margin-top: 30px;
+  margin-left: 40px;
+  
+}
+
+
+.main_btn a
+{
+ position:relative;
+ z-index: 2;
+ color:#000809;
+ text-decoration: none;
+ font-weight: 600;
+}
+
+
+.main_btn:after{
+  position: absolute;
+  content: ' ';
+  top:0;
+  left:0;
+  width: 0%;
+  height: 100%;
+  background: #4046f4;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+
+.main_btn:hover{
+  color: #f13a3a;
+  
+}
+
+
+.main_btn:hover:after{
+  width: 100%;
+  
+}
+
+.main_imag--container{
+  text-align: center;
+}
+
+
+#main_img{
+  height:100%;
+  width:100%;
+}
+
+
+/* making it responsive to window size change the intro sec*/
+
+@media screen and (max-width:768px){
+
+.main_contain{
+  display:grid;
+  grid-template-columns:auto;
+  align-items:center;
+  justify-self: center;
+  width:100%;
+  margin: 0 auto;
+  height:90vh;
+}
+
+.main_content{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.main_content h1{
+  font-size: 2.5 rem;
+  margin-top: 2rem;
+}
+
+.intro-text {
+margin-top: 1rem;
+font-size:1.5rem;
+}
+
+.main_btn{
+  padding:12px 36px;
+  margin:2.5rem 0;
+}
+
+.main_imag{
+  height:30vh;
+}
+
+}
+
+
+
+
+@media screen and (max-width: 408px){
+  .main_content h1{
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .intro-text {
+  margin-top: 2rem;
+  font-size:1.5rem;
+  }
+  .main_imag{
+    height:20vh;
+  }
+
+}
+
+
+
+ .lcon{
+  background-color: #b2b2b793; /* Light gray with transparency */
+  width:100%;
+  height: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.lcon h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4a90e2; /* Blue color for the header */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.lcon p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333; /* Dark gray color for the text */
+  max-width: 800px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  font-style: italic;
+}
+
+
+ /************************************************************/
+
+.lcon2{
+  background-color: #a9b8c5ae;
+  width:100%;
+  height: 500px;
+  position: relative;
+ display: flex;
+ flex-direction: column;
+ align-items: center; /* Center content vertically */
+ justify-content: center; /* Center content horizontally */
+ background-image: url('missionai.jpg'); /* Add your image path */
+ background-size: cover; /* Ensure the image covers the entire container */
+ background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Prevent repeating */
+ text-align: center;
+ overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+
+.lcon2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('missionai.jpg'); /* Add your image path */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  filter: blur(5px); /* Apply blur to the background image */
+  z-index: 1; /* Place the blurred background behind the content */
+}
+
+.lcon2 h2,
+.lcon2 p {
+  position: relative; /* Keep text above the overlay */
+  z-index: 2; /* Make sure the text is above the overlay */
+  color: #f0dcf8;
+  font-size: 24px; /* Increase font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Styles for phones (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .lcon {
+    height: auto; /* Adjust height to fit content */
+    padding: 20px 0; /* Add padding for better spacing */
+  }
+
+  .lcon h2 {
+    font-size: 28px; /* Smaller font size for phones */
+    letter-spacing: 1px;
+  }
+
+  .lcon p {
+    font-size: 16px; /* Smaller font size for phones */
+    max-width: 90%; /* Reduce max-width for better readability */
+  }
+
+  .lcon2 {
+    height: 400px; /* Reduce height for phones */
+  }
+
+  .lcon2 h2,
+  .lcon2 p {
+    font-size: 20px; /* Smaller font size for phones */
+  }
+}
+
+/* Styles for desktops (screens larger than 1200px) */
+@media (min-width: 1200px) {
+  .lcon {
+    height: 400px; /* Increase height for desktops */
+  }
+
+  .lcon h2 {
+    font-size: 42px; /* Larger font size for desktops */
+  }
+
+  .lcon p {
+    font-size: 22px; /* Larger font size for desktops */
+    max-width: 1000px; /* Increase max-width for desktops */
+  }
+
+  .lcon2 {
+    height: 600px; /* Increase height for desktops */
+  }
+
+  .lcon2 h2,
+  .lcon2 p {
+    font-size: 28px; /* Larger font size for desktops */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* footer*/
+
+.foot_contain{
+  background:#08090b46;
+  padding: 5rem 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  margin-top: 40px;
+}
+
+#footer_logo{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.footer_links{
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.fotter_link_wrapper{
+  display: flex;
+}
+
+
+
+.fotter_link_items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  box-sizing:border-box;
+}
+
+.fotter_link_items h1{
+  margin-bottom: 16px;
+}
+
+.fotter_link_items > h1{  /* for targting h2 */
+  color: #f0eeee;
+}
+
+.fotter_link_items a{
+  color:#f6f2f2;
+  text-decoration: none; /* so the underline will go */
+}
+
+.fotter_link_items a:hover{
+color:#2515d4eb; /*gets a little gray when we hover over it */
+transition: 0.3s ease-out; /* how long for the color to apear*/
+}
+
+
+
+
+
+
+ @media screen and (max-width:800px ){
+    
+ }
+
+  
+@media screen and (max-width:500px ){
+  
+
+
+
+}
+
+
+
+/* social icons*/
+.social_icon_link{
+  color:#e5e2e2;
+  font-size:24px;
+
+}
+.social_media{
+  max-width: 1000px;
+  width:100%;
+}
+
+.social_media_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:90%;
+  max-width:1000px;
+  margin: 10px auto 0 auto;
+}
+
+.social_icons{
+  display:flex;
+  justify-content: space-between;
+ align-items:center ;
+  width:70px;
+  margin-left: 50px;
+}
+
+
+.footer_logo{
+  color:#111010;
+  justify-self:center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size:2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+
