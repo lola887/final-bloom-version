@@ -427,15 +427,17 @@ font-size:1.5rem;
   background-size: cover; /* Ensure the image covers the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating */
-  filter: blur(5px); /* Apply blur to the background image */
+  filter: blur(2px); /* Apply blur to the background image */
   z-index: 1; /* Place the blurred background behind the content */
 }
 
-.lcon2 h2,
+.lcon2 h2{
+   font-size: 30px; /* Increase font size */
+}
 .lcon2 p {
   position: relative; /* Keep text above the overlay */
   z-index: 2; /* Make sure the text is above the overlay */
-  color: #f0dcf8;
+  color: #ffff;
   font-size: 24px; /* Increase font size */
   font-weight: bold;
   margin: 0;
